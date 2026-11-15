@@ -1,0 +1,86 @@
+[
+  {
+    "id": "faceforensicspp",
+    "name": "FaceForensics++ (c23/c40)",
+    "modality": "video",
+    "role": "train_validation",
+    "source_url": "https://github.com/ondyari/FaceForensics",
+    "access": "Research access/request may be required; follow official instructions.",
+    "license_review": "pending",
+    "access_status": "not_requested",
+    "direct_download_url": null,
+    "notes": "PPT plan: train/validate; use source-video grouped split."
+  },
+  {
+    "id": "dfdc_subset",
+    "name": "Deepfake Detection Challenge (DFDC) subset",
+    "modality": "video",
+    "role": "train_validation",
+    "source_url": "https://ai.meta.com/datasets/dfdc/",
+    "access": "Check current provider access terms and dataset agreement.",
+    "license_review": "pending",
+    "access_status": "not_requested",
+    "direct_download_url": null,
+    "notes": "PPT plan: use a manageable subset due to dataset size."
+  },
+  {
+    "id": "asvspoof2019la",
+    "name": "ASVspoof 2019 LA",
+    "modality": "audio",
+    "role": "train_validation",
+    "source_url": "https://www.asvspoof.org/",
+    "access": "Check official challenge download and usage conditions.",
+    "license_review": "pending",
+    "access_status": "not_requested",
+    "direct_download_url": null,
+    "notes": "PPT plan: logical access (LA) audio spoof benchmark."
+  },
+  {
+    "id": "wavefake",
+    "name": "WaveFake",
+    "modality": "audio",
+    "role": "train_validation",
+    "source_url": "https://github.com/RUB-SysSec/WaveFake",
+    "access": "Review repository licence and underlying dataset terms before use.",
+    "license_review": "pending",
+    "access_status": "not_requested",
+    "direct_download_url": null,
+    "notes": "PPT plan: train/validate synthetic speech detection."
+  },
+  {
+    "id": "celebdfv2",
+    "name": "Celeb-DF v2",
+    "modality": "video",
+    "role": "cross_dataset_test",
+    "source_url": "https://github.com/yuezunli/celeb-deepfakeforensics",
+    "access": "Follow official access request and terms.",
+    "license_review": "pending",
+    "access_status": "not_requested",
+    "direct_download_url": null,
+    "notes": "PPT plan: unseen-generator cross-dataset test; do not train on this by default."
+  },
+  {
+    "id": "deepfakeeval2024",
+    "name": "Deepfake-Eval-2024",
+    "modality": "multimodal",
+    "role": "in_the_wild_test",
+    "source_url": "https://deepfake-eval-2024.com/",
+    "access": "Review paper/repository access, licence and evaluation restrictions.",
+    "license_review": "pending",
+    "access_status": "not_requested",
+    "direct_download_url": null,
+    "notes": "PPT plan: primary in-the-wild evaluation set; keep evaluation-only unless permitted fine-tuning is declared."
+  },
+  {
+    "id": "inthewild_audio",
+    "name": "In-the-Wild audio dataset",
+    "modality": "audio",
+    "role": "audio_test",
+    "source_url": "https://deepfake-total.com/in-the-wild",
+    "access": "Verify the exact dataset source and current access/licence terms before use.",
+    "license_review": "pending",
+    "access_status": "not_requested",
+    "direct_download_url": null,
+    "notes": "PPT plan: audio spoof evaluation. Confirm the exact intended benchmark/source with the project supervisor."
+  }
+]

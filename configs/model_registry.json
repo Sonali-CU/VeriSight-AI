@@ -1,0 +1,60 @@
+{
+  "image": {
+    "status": "trained",
+    "architecture": "EfficientNet-B0",
+    "weights_path": "models/image/verisight_efficientnet_b0_ffpp_source_disjoint.pth",
+    "note": "Trained image deepfake detection model. Checkpoint is integrated with the image inference endpoint."
+  },
+  "video": {
+    "status": "trained",
+    "architecture": "EfficientNet-B0 + BiLSTM",
+    "weights_path": "models/video/verisight_temporal_lstm_best.pth",
+    "note": "Temporal video model trained on 200 FaceForensics++ C23 videos using a source-disjoint split. Temporal inference is integrated. Frame-based inference is also available."
+  },
+  "audio": {
+    "status": "trained",
+    "architecture": "AudioSpoofCNN (Log-Mel + 2D CNN)",
+    "weights_path": "models/audio/verisight_audio_cnn_cpu.pth",
+    "note": "Audio deepfake detection model trained on ASVspoof 2019 LA. Dev ROC-AUC: 0.966, EER: 0.095, Accuracy: 0.915.",
+    "metrics": {
+      "threshold_selected_on_dev": 0.963,
+      "accuracy": 0.915,
+      "balanced_accuracy": 0.915,
+      "precision_spoof": 0.9826,
+      "recall_spoof": 0.845,
+      "f1_spoof": 0.9086,
+      "roc_auc": 0.966,
+      "pr_auc": 0.9718,
+      "eer_approx": 0.095,
+      "confusion_matrix": {
+        "bonafide": {
+          "predicted_bonafide": 197,
+          "predicted_spoof": 3
+        },
+        "spoof": {
+          "predicted_bonafide": 31,
+          "predicted_spoof": 169
+        }
+      },
+      "raw_confusion_matrix": [
+        [
+          197,
+          3
+        ],
+        [
+          31,
+          169
+        ]
+      ],
+      "dev_loss": 0.2572,
+      "dev_samples": 400,
+      "train_samples": 1000
+    }
+  },
+  "fusion": {
+    "status": "trained",
+    "architecture": "Calibrated Dynamic-Weighted Late Fusion",
+    "weights_path": "backend/app/inference/late_fusion.py",
+    "note": "Multimodal late fusion combining EfficientNet-B0 visual frames, BiLSTM temporal sequence, and AudioSpoofCNN acoustic streams with missing-modality compensation."
+  }
+}

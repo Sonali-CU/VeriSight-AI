@@ -1,0 +1,243 @@
+{
+    "video_analysis": {
+        "source_csv": "test_video_facial_metrics.csv",
+        "total_frames": 725,
+        "estimated_fps": 28.74,
+        "duration_seconds": 25.25
+    },
+    "eye_analysis": {
+        "candidate_blink_count": 11,
+        "prolonged_closure_count": 0,
+        "blink_events": [
+            {
+                "start_time": 3.169,
+                "end_time": 3.239,
+                "duration_seconds": 0.105,
+                "frame_count": 3,
+                "minimum_ear": 0.0417,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 4.667,
+                "end_time": 4.736,
+                "duration_seconds": 0.105,
+                "frame_count": 3,
+                "minimum_ear": 0.016,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 7.696,
+                "end_time": 7.801,
+                "duration_seconds": 0.139,
+                "frame_count": 4,
+                "minimum_ear": 0.0233,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 8.846,
+                "end_time": 8.985,
+                "duration_seconds": 0.174,
+                "frame_count": 5,
+                "minimum_ear": 0.0161,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 11.249,
+                "end_time": 11.492,
+                "duration_seconds": 0.279,
+                "frame_count": 8,
+                "minimum_ear": 0.052,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 11.98,
+                "end_time": 12.328,
+                "duration_seconds": 0.383,
+                "frame_count": 11,
+                "minimum_ear": 0.071,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 12.746,
+                "end_time": 12.885,
+                "duration_seconds": 0.174,
+                "frame_count": 5,
+                "minimum_ear": 0.0421,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 16.194,
+                "end_time": 16.473,
+                "duration_seconds": 0.313,
+                "frame_count": 9,
+                "minimum_ear": 0.0479,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 21.418,
+                "end_time": 21.592,
+                "duration_seconds": 0.209,
+                "frame_count": 6,
+                "minimum_ear": 0.1112,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 22.811,
+                "end_time": 22.88,
+                "duration_seconds": 0.105,
+                "frame_count": 3,
+                "minimum_ear": 0.0805,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 24.343,
+                "end_time": 24.413,
+                "duration_seconds": 0.105,
+                "frame_count": 3,
+                "minimum_ear": 0.1187,
+                "event_type": "candidate_blink"
+            },
+            {
+                "start_time": 25.074,
+                "end_time": 25.214,
+                "duration_seconds": 0.174,
+                "frame_count": 5,
+                "minimum_ear": 0.0305,
+                "event_type": "closure_at_video_end"
+            }
+        ]
+    },
+    "mouth_analysis": {
+        "high_mouth_activity_event_count": 21,
+        "mouth_events": [
+            {
+                "start_time": 1.776,
+                "end_time": 2.09,
+                "frame_count": 10,
+                "maximum_mar": 0.6842
+            },
+            {
+                "start_time": 3.343,
+                "end_time": 3.448,
+                "frame_count": 4,
+                "maximum_mar": 0.6244
+            },
+            {
+                "start_time": 4.771,
+                "end_time": 4.98,
+                "frame_count": 7,
+                "maximum_mar": 0.7549
+            },
+            {
+                "start_time": 5.398,
+                "end_time": 5.433,
+                "frame_count": 2,
+                "maximum_mar": 0.6332
+            },
+            {
+                "start_time": 6.478,
+                "end_time": 6.791,
+                "frame_count": 10,
+                "maximum_mar": 0.8317
+            },
+            {
+                "start_time": 8.88,
+                "end_time": 9.089,
+                "frame_count": 7,
+                "maximum_mar": 0.7076
+            },
+            {
+                "start_time": 10.726,
+                "end_time": 10.796,
+                "frame_count": 3,
+                "maximum_mar": 0.6787
+            },
+            {
+                "start_time": 10.935,
+                "end_time": 11.075,
+                "frame_count": 5,
+                "maximum_mar": 0.7083
+            },
+            {
+                "start_time": 12.015,
+                "end_time": 12.328,
+                "frame_count": 10,
+                "maximum_mar": 0.713
+            },
+            {
+                "start_time": 12.92,
+                "end_time": 12.955,
+                "frame_count": 2,
+                "maximum_mar": 0.6729
+            },
+            {
+                "start_time": 13.686,
+                "end_time": 13.791,
+                "frame_count": 4,
+                "maximum_mar": 0.7457
+            },
+            {
+                "start_time": 14.313,
+                "end_time": 14.348,
+                "frame_count": 2,
+                "maximum_mar": 0.6456
+            },
+            {
+                "start_time": 14.87,
+                "end_time": 15.079,
+                "frame_count": 7,
+                "maximum_mar": 0.8628
+            },
+            {
+                "start_time": 16.473,
+                "end_time": 16.577,
+                "frame_count": 4,
+                "maximum_mar": 0.6808
+            },
+            {
+                "start_time": 19.816,
+                "end_time": 19.885,
+                "frame_count": 3,
+                "maximum_mar": 0.6419
+            },
+            {
+                "start_time": 20.408,
+                "end_time": 20.756,
+                "frame_count": 11,
+                "maximum_mar": 0.8444
+            },
+            {
+                "start_time": 22.01,
+                "end_time": 22.045,
+                "frame_count": 2,
+                "maximum_mar": 0.641
+            },
+            {
+                "start_time": 22.532,
+                "end_time": 22.637,
+                "frame_count": 4,
+                "maximum_mar": 0.7191
+            },
+            {
+                "start_time": 23.089,
+                "end_time": 23.263,
+                "frame_count": 6,
+                "maximum_mar": 0.8262
+            },
+            {
+                "start_time": 23.438,
+                "end_time": 23.855,
+                "frame_count": 13,
+                "maximum_mar": 0.7299
+            },
+            {
+                "start_time": 24.308,
+                "end_time": 24.482,
+                "frame_count": 6,
+                "maximum_mar": 1.024
+            }
+        ],
+        "threshold_used": 0.6
+    },
+    "interpretation": "Behavioural measurements only. These results do not establish whether a video is real or manipulated."
+}

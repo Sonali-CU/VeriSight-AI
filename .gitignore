@@ -1,0 +1,33 @@
+# Environments & virtualenvs
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Node & Frontend dependencies
+node_modules/
+frontend/dist/
+dist/
+.npm/
+
+# Model cache & temporary training dumps (preventing 300MB cache commit)
+models/**/cache/
+*.npy
+runtime/uploads/
+forensics_output/
+*.mp4
+*.flac
+*.wav
+
+# Environment variables & local secrets
+.env
+.env.local
+.DS_Store
+Thumbs.db

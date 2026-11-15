@@ -1,0 +1,38 @@
+{
+  "datasets": {
+    "video": [
+      "FaceForensics++",
+      "DFDC_subset",
+      "Celeb-DF_v2_test"
+    ],
+    "audio": [
+      "ASVspoof_2019_LA",
+      "WaveFake",
+      "InTheWild_audio_test"
+    ],
+    "evaluation": [
+      "Deepfake-Eval-2024"
+    ]
+  },
+  "manifests": [
+    "video_frames.csv",
+    "audio_samples.csv",
+    "video_sequences.csv"
+  ],
+  "processed": [
+    "face_crops",
+    "frame_sequences",
+    "mel_spectrograms"
+  ],
+  "models": [
+    "image",
+    "video",
+    "audio",
+    "fusion"
+  ],
+  "evaluation_results": [
+    "same_dataset",
+    "cross_dataset",
+    "robustness"
+  ]
+}

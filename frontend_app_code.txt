@@ -1,0 +1,46 @@
+import { useEffect, useState } from 'react';
+
+type Health = {status:string; service:string; model_status:string};
+type Model = {modality:string; status:string; architecture?:string; note:string};
+
+export default function App() {
+  const [health, setHealth] = useState<Health | null>(null);
+  const [models, setModels] = useState<Model[]>([]);
+  const [message, setMessage] = useState('Checking API…');
+  const [file, setFile] = useState<File | null>(null);
+
+  async function refresh() {
+    try {
+      const [h, m] = await Promise.all([
+        fetch('http://127.0.0.1:8000/health'),
+        fetch('http://127.0.0.1:8000/api/v1/models')
+      ]);
+      if (!h.ok || !m.ok) throw new Error('API request failed');
+      setHealth(await h.json());
+      setModels((await m.json()).models);
+      setMessage('API connected. Detection models are not trained yet.');
+    } catch {
+      setMessage('Cannot reach FastAPI. Start the backend on http://127.0.0.1:8000.');
+    }
+  }
+  useEffect(() => { refresh(); }, []);
+
+  async function upload() {
+    if (!file) return;
+    const body = new FormData(); body.append('file', file);
+    try {
+      const r = await fetch('http://127.0.0.1:8000/api/v1/inspect', {method:'POST', body});
+      const data = await r.json();
+      setMessage(r.ok ? `Upload receipt created. SHA-256: ${data.sha256}. No prediction was made.` : JSON.stringify(data));
+    } catch { setMessage('Upload failed. Check that the API is running.'); }
+  }
+
+  return <main className="shell">
+    <header><div className="eyebrow">MULTIMODAL MEDIA FORENSICS · RESEARCH BUILD</div><h1>VeriSight <span>AI</span></h1><p>Inspect media. Validate models. Keep human review in the loop.</p></header>
+    <section className="notice"><strong>Development status:</strong> This build has no trained deepfake weights. It will not label media real or fake until models are trained, evaluated and integrated.</section>
+    <section className="panel"><div className="section-title"><h2>Backend status</h2><button onClick={refresh}>Refresh</button></div><p>{message}</p><p className="muted">API: {health?.service ?? 'not connected'} · Model status: {health?.model_status ?? 'unknown'}</p></section>
+    <section className="panel"><h2>Model registry</h2><div className="models">{models.map(m=><article key={m.modality}><b>{m.modality.toUpperCase()}</b><span className="pending">{m.status.replace('_',' ')}</span><p>{m.architecture}</p><small>{m.note}</small></article>)}</div></section>
+    <section className="panel"><h2>Upload connectivity test</h2><p className="muted">This tests file upload and hashing only. It does not perform deepfake detection.</p><input type="file" onChange={e=>setFile(e.target.files?.[0] ?? null)}/><button disabled={!file} onClick={upload}>Upload test file</button></section>
+    <footer>Research prototype · A detector output is a risk signal, not proof. Human verification is required.</footer>
+  </main>;
+}
